@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.lovezhima.build</groupId>
+        <artifactId>zhima-build-parent</artifactId>
+        <version>2024.1-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.lovezhima.boot</groupId>
+    <artifactId>zhima-spring-boot-parent</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>zhima-boot-core</module>
+        <module>zhima-boot-redis-delayqueue</module>
+        <module>zhima-boot-redis-generator</module>
+        <module>zhima-boot-web-response</module>
+        <module>zhima-boot-redis-ratelimiter</module>
+        <module>zhima-boot-easyexcel</module>
+    </modules>
+
+    <properties>
+        <revision>2024.1-SNAPSHOT</revision>
+
+        <zhima-boot-core.version>${project.version}</zhima-boot-core.version>
+        <zhima-boot-redis-delayqueue.version>${project.version}</zhima-boot-redis-delayqueue.version>
+        <zhima-boot-redis-generator.version>${project.version}</zhima-boot-redis-generator.version>
+        <zhima-boot-redis-ratelimiter.verison>${project.version}</zhima-boot-redis-ratelimiter.verison>
+        <zhima-boot-web-response.version>${project.version}</zhima-boot-web-response.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--模块下的所有依赖-->
+    <dependencyManagement>
+        <dependencies>
+            <!--本模块的所有依赖-->
+            <dependency>
+                <groupId>com.lovezhima.boot</groupId>
+                <artifactId>zhima-boot-core</artifactId>
+                <version>${zhima-boot-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lovezhima.boot</groupId>
+                <artifactId>zhima-boot-redis-delayqueue</artifactId>
+                <version>${zhima-boot-redis-delayqueue.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lovezhima.boot</groupId>
+                <artifactId>zhima-boot-redis-generator</artifactId>
+                <version>${zhima-boot-redis-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lovezhima.boot</groupId>
+                <artifactId>zhima-boot-redis-ratelimiter</artifactId>
+                <version>${zhima-boot-redis-ratelimiter.verison}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lovezhima.boot</groupId>
+                <artifactId>zhima-boot-web-response</artifactId>
+                <version>${zhima-boot-web-response.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
