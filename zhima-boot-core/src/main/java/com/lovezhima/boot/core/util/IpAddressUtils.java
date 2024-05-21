@@ -1,6 +1,5 @@
 package com.lovezhima.boot.core.util;
 
-import com.lovezhima.boot.core.context.RequestContext;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
@@ -38,10 +37,6 @@ public class IpAddressUtils {
         HttpServletRequest request = ((ServletRequestAttributes)
                 Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
         return getRealIp(request);
-    }
-
-    public static String getRealIpAddress(RequestContext requestContext) {
-        return getRealIpAddress(requestContext.getServletRequest());
     }
 
 

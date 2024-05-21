@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.lovezhima.boot</groupId>
-        <artifactId>zhima-spring-boot-parent</artifactId>
+        <artifactId>zhima-boot-parent</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
     </parent>

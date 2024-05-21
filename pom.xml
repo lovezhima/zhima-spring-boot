@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>com.lovezhima.boot</groupId>
-    <artifactId>zhima-spring-boot-parent</artifactId>
+    <artifactId>zhima-boot-parent</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 
@@ -23,6 +23,7 @@
         <module>zhima-boot-web-response</module>
         <module>zhima-boot-redis-ratelimiter</module>
         <module>zhima-boot-easyexcel</module>
+        <module>zhima-boot-engine-qlexpress</module>
     </modules>
 
     <properties>
